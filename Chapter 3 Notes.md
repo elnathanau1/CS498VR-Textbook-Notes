@@ -42,3 +42,17 @@
     2. How each part of model should appear after lighting sources and surface properties defined in virtual world
 
 ### 3.2 Changing Position and Orientation
+- Suppose movable model defined as mesh of triangles. To move, _apply single transformation to every vertex of every triangle_
+<br>
+- __Translations__
+  - Consider triangle:
+  ```
+  ((x₁,y₁,z₁), (x₂,y₂,z₂), (x₃,y₃,z₃))
+  ```
+  - Let _xΤ, yΤ, and zΤ_ be amount we want to change triangle's position. __Translation__ given by:
+  ```
+  (x₁,y₁,z₁) → (x₁ + xΤ, y₁ + yΤ, z₁ + zΤ)
+  (x₂,y₂,z₂) → (x₂ + xΤ, y₂ + yΤ, z₂ + zΤ)
+  (x₃,y₃,z₃) → (x₃ + xΤ, y₃ + yΤ, z₃ + zΤ)
+  ```
+  in which _a → b_ denotes a becomes replaced by b after transformation is applied
